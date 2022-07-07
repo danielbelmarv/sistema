@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'core/css/main.css' %}">
+   
+    <title>  Jardin de Todos &#127803;</title>
+  </head>
+<body>
+{% load static %}
+<!-- NAVBAR-->
+<nav class="navbar navbar-expand-lg 
+      navbar-light bg-light p-2" >
+  <div class="container-fluid">
+
+        <a class="navbar-brand p-2" id="menu"> </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+        <!--Inicio Secciones en containers de NavBar-->
+    <section class="container-fluid">
+      <div class="row">
+               
+            <!--Logo-->
+            <div class="col">
+              <a href="{% url 'indexV3' %}">
+                <button type="button" class="btn btn-outline-light">
+              <img src="{% static 'core/img/icono.jpg'%}" alt="LOGO Jardin de Todos" width="140" height="65" >
+                </button>
+              </a>
+            </div>
+
+            <!--Button Bar-->
+            <div class="col">
+              <div class="btn-group  p-3 mx-3" role="group" aria-label="Basic outlined example">
+                <button type="button" class="btn btn-outline-primary btn-lg" href="CatalogoMaceteros.html"> Maceteros</button>
+                <button type="button" class="btn btn-outline-primary btn-lg" href="CatalogoTierras.html" >Tierra</button>
+                <button type="button" class="btn btn-outline-primary btn-lg" href="CatalogoFlores.html">Flores</button>
+                <button type="button" class="btn btn-outline-primary btn-lg" href="CatalogoArbustos.html">Arbustos</button>
+              </div>
+            </div>
+         
+          <!--Search Bar-->
+          <div class="col">
+            <form class="d-flex p-3 ">
+              <input class="form-control me-2" type="search" placeholder="Busca tu Producto de Tierra y Jardín favorito…" aria-label="Buscar">
+              <button class="btn btn-outline-success btn-lg" type="submit">¡Encontrar!</button>
+            </form>
+          </div>
+
+          <!--Botones Link-->
+          <div class="col">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto  mb-2 mb-lg-0">
+           
+                      <li class="nav-item">
+                        <a href="{% url 'compra' %}">
+                          <button type="button" class="btn btn-outline-secondary ">
+                            <img src="{% static 'core/img/MiCarr.png'%}" alt="Mi Carrito" height="59" >
+                          </button>
+                        </a>
+                      </li>
+  <!--comment nuevo--> 
+                      <li class="nav-item">
+                        <a href="{% url 'MicuentaV2' %}">
+                          <button type="button" class="btn btn-outline-secondary">
+                           <img src="{% static 'core/img/MiCue.png'%}" alt="Mi Cuenta" height="59">
+                          </button>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a href="{% url 'MiPedidoV2' %}">
+                        <button type="button" class="btn btn-outline-secondary">
+                         <img src="{%static 'core/img/MiPed.png'%}" alt="Mi Pedido" height="59" >
+                       </button>
+                    </a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a href="">
+                        <button type="button" class="btn btn-outline-secondary">
+                         <img src="{% static 'core/img/Descuent.png' %}" alt="Descuentos" height="59">
+                      </a>
+                        </button>
+                    </li>
+
+              </ul>
+            </div>
+          </div>
+
+      </div>
+    </section>
+  </div>
+</nav>
+
+   <!--Fin Secciones en containers de NavBar-->
+
+
+      <!--SLIDER DE IMAGENES-->
+
+      <section class="container-fluid">
+
+        <div class="row">
+<!--Carusel 1-->
+      <div class="col">
+      <div id="carouselExampleControls" class="carousel slide carousel-fade " data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="2300">
+            <img src="{% static 'core/img/Car1HuerUrb.jpg' %}" class="d-block "  alt="Huerta Urbana 1" width="450" height="320">
+          </div>
+          <!-- "{% static 'core/img/Descuent.png' %}" -->
+          <div class="carousel-item" data-bs-interval="2300">
+            <img src="{% static 'core/img/Car2HuerUrb.jpg' %}" class="d-block "  alt="Huerta Urbana 2" width="450" height="320" >
+          </div>
+          <div class="carousel-item " data-bs-interval="2300">
+            <img src="{% static 'core/img/Car3HuerUrb.jpg' %}" class="d-block "  alt="Huerta Urbana 3" width="450" height="320" >
+          </div>
+        </div>
+      </div>
+    </div>
+<!--Carusel 2-->
+    <div class="col">
+      <div id="carouselExampleControls" class="carousel slide carousel-fade " data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="2300">
+            <img src="{% static 'core/img/Car2Abono.jpg' %}" class="d-block "  alt="Abono 1" width="450" height="320">
+          </div>
+          <div class="carousel-item" data-bs-interval="2300">
+            <img src="{% static 'core/img/Car2Abono2.png' %}" class="d-block "  alt="Abono 2" width="450" height="320" >
+          </div>
+          <div class="carousel-item " data-bs-interval="2300">
+            <img src="{% static 'core/img/Car2Abono3.jpg' %}" class="d-block "  alt="Abono 3" width="450" height="320" >
+          </div>
+        </div>
+      </div>
+    </div>
+<!--Carusel 3 -->
+    <div class="col">
+      <div id="carouselExampleControls" class="carousel slide carousel-fade " data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="2300">
+            <img src="{% static 'core/img/Car3Fresias.png' %}" class="d-block "  alt="Flores" width="450" height="320">
+          </div>
+          <div class="carousel-item" data-bs-interval="2300">
+            <img src="{% static 'core/img/Car3Babianas.png' %}" class="d-block "  alt="Flores 2" width="450" height="320" >
+          </div>
+          <div class="carousel-item " data-bs-interval="2300">
+            <img src="{% static 'core/img/Car3Arlequines.png' %}" class="d-block "  alt="Huerta Urbana 3" width="450" height="320" >
+          </div>
+        </div>
+      </div>
+    </div>
+<!--Carrusel 4-->
+    <div class="col">
+      <div id="carouselExampleControls" class="carousel slide carousel-fade " data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="2300">
+            <img src="{% static 'core/img/Arbusto 1 Abelia.jpg' %}" class="d-block "  alt="Huerta Urbana 1" width="450" height="320">
+          </div>
+          <div class="carousel-item" data-bs-interval="2300">
+            <img src="{% static 'core/img/arbusto 2 Arrayan.jpg' %}" class="d-block "  alt="Huerta Urbana 2" width="450" height="320" >
+          </div>
+          <div class="carousel-item " data-bs-interval="2300">
+            <img src="{% static 'core/img/Arbusto 3 Berberis.jpg' %}" class="d-block "  alt="Huerta Urbana 3" width="450" height="320" >
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!--Imagenes con secciones de Productos-->
+
+<section class="container-fluid">
+  <div class="row">
+      <div class="col text-center">
+        <a href="{% url 'CatalogoCompleto' %}">
+          <button type="button" class="btn btn-outline-light mt-3 ">
+            <img src="{% static 'core/img/Macetero.png' %}" alt="Macetero"  width="150" height="113" >
+          </button>
+        </a>
+        
+           <h2> MACETEROS </h2>
+            <p><span class="text-secondary text-center fs-4 text lh-1  "> 
+            Desde un tradicional macetero de Adobe  <br>
+            Hasta un moderno macetero inteligente… <br>
+            ¡Todos los maceteros estan AQUÍ!
+          </span></p>
+      </div>
+
+      <div class="col text-center">
+        <a href="{% url 'CatalogoCompleto' %}">
+          <button type="button" class="btn btn-outline-light mt-3">
+            <img src="{% static 'core/img/fertilizantes.jpg' %}" alt="Tierras"  width="150" height="113" >
+          </button>
+        </a>
+           <h2> TIERRAS </h2>
+            <p><span class="text-secondary text-center fs-4 text lh-1 "> 
+            Desde la clasica tierra rica en nutrientes <br>
+            del campo chileno, hasta el fertilizante <br>
+            más Profesional para tu cancha de futbol.
+            
+
+          </span></p>
+      </div>
+
+      <div class="col text-center">
+        <a href="{% url 'CatalogoCompleto' %}">
+          <button type="button" class="btn btn-outline-light mt-3">
+            <img src="{% static 'core/img/Flor Copihue.jpg' %}" alt="Macetero"  width="150" height="113" >
+          </button>
+        </a>
+           <h2> FLORES </h2>
+            <p><span class="text-secondary text-center fs-4 text  lh-1"> 
+            Florece tu vida con la luz de las <br>
+            Margaritas, la intensidad de los <br>
+            Copihues y la pasión de las rosas. 
+          </span></p>
+      </div>
+
+      <div class="col text-center">
+        <a href="{% url 'CatalogoCompleto' %}">
+          <button type="button" class="btn btn-outline-light mt-3">
+            <img src="{% static 'core/img/Arbusto 4 Chagual.jpg' %}" alt="Macetero"  width="150" height="113" >
+          </button>
+        </a>
+           <h2> ARBUSTOS </h2>
+            <p><span class="text-secondary text-center fs-4 text  lh-1"> 
+            Completa tu espacio con la vida de las <br>
+            Abelias, el verdor de los Berberis y el  <br>
+            tradicional encanto del Arrayan. 
+
+          </span></p>
+      </div>
+
+  </div>
+</section>
+
+<!--Mensaje de Suscripcion-->
+
+  <section class="w-50 mx-auto text-center" id="IntroSusc">
+      <a href="{% url 'SuscFundV2' %}">
+        <button type="button" class="btn btn-outline-light mt-2">
+          <img src="{% static 'core/img/TierraMojada.png' %}" alt="LOGO Tierra Mojada" width="113" height="56" >
+        </button>
+      </a>
+        <p><span class="text-primary fs-4 lh-1 "> 
+          ¡SUSCRIBETE a la Fundación Tierra Mojada! <br>
+          Y le darás agua a localidades sin ella… <br>
+          ¡Al tiempo que obtendrás un 5% de descuento! <br> <br>
+        </span></p>
+      </section>
+
+<!--API Rest Google Maps-->
+
+<div class="text-center"  >
+  <p><span class=" fs-4 lh-1 text text-center"> 
+  <text-center><b>NUESTRO <img src="{% static 'core/img/icono.jpg' %}" alt="LOGO Jardin de Todos" width="112" height="53" >
+      se encuentra ubicado en Avenida Las Palmeras #1000 Talagante, RM <br>
+  Si algún día decides visitar nuestro propio terreno... ¡Podras comprar todos nuestros productos! </b></text-center>
+ </span></p>
+</div>
+
+<section>
+<div id="map"></div>
+<script src="{% static 'core/js/script.js' %}"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script>
+</section>
+
+<section class="w-50 mx-auto text-center" id="IntroSusc">
+  <a href="{% url 'productos' %}">
+    <button type="button" class="btn btn-primary">
+      <h4>Agregar Productos </h4>
+    </button>
+  </a>
+  </section>
+
+<br>
+<!--Footer-->
+<div class="wrapper">
+</div>
+<footer class= "footer text-center fs-3 text mt-2">
+    <a href="#" class="link-primary">NOSOTROS | </a>
+    <a href="#" class="link-primary"> COLABORA |</a>
+    <a href="#" class="link-primary"> SUSTENTABILIDAD |</a>
+    <a href="#" class="link-primary"> CONTACTANOS |</a>
+</footer>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+  </body>
+</html>
